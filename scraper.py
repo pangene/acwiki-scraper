@@ -72,7 +72,7 @@ def get_description(url, version):
     try:
         description = game_heading.findNext('p')
         # Some descriptions are formatted differently, contain an extra p tag
-        while len(description.text) < 125:
+        while len(description.text) < 150:
             description = description.findNext('p')
     except AttributeError:
         logging.warning('Error while getting description')
